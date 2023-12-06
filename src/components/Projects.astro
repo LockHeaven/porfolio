@@ -1,0 +1,86 @@
+---
+import SectionProject from "./SectionProject.astro";
+import AngularIcon from "./icons/AngularIcon.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import TailwindIcon from "./icons/TailwindIcon.astro";
+import TypeScriptIcon from "./icons/TypeScriptIcon.astro";
+---
+
+<section class="mt-28 flex flex-col gap-5">
+  <header>
+    <h1 class="text-white text-2xl font-semibold">Projects</h1>
+  </header>
+  <div class="grid grid-cols-2 gap-6 auto-rows-[310px]">
+    <SectionProject
+      title="Tesla App"
+      img="/public/projects/tesla.webp"
+      imgTitle="Tesla App"
+      githubUrl=""
+      liveUrl=""
+    >
+      <div slot="techs" class="flex gap-2">
+        <AstroIcon size="h-8 w-8" />
+      </div>
+      <p class="text-white grow">
+        I have developed a replica of Tesla's homepage where I have implemented
+        advanced design and navigation features. By using Intersection Observe
+      </p>
+    </SectionProject>
+
+    <SectionProject
+      title="Spotify Clone"
+      img="/public/projects/spotify.webp"
+      imgTitle="Spotify Clone App"
+      githubUrl=""
+      liveUrl=""
+    >
+      <div slot="techs" class="flex gap-2">
+        <AngularIcon size="h-6 w-6" />
+        <TypeScriptIcon size="h-6 w-6" />
+        <TailwindIcon size="h-6 w-6" />
+      </div>
+      <p class="text-white grow">
+        It is a Spotify clone created with Angular, which includes the
+        functionalities of playing, changing songs, viewing and playing songs
+        from playlists, and maintaining the song state.
+      </p>
+    </SectionProject>
+
+    <SectionProject
+      title="Lofi Bits"
+      img="/public/projects/radio.webp"
+      imgTitle="Lofi Bits App"
+      githubUrl=""
+      liveUrl=""
+    >
+      <div slot="techs" class="flex gap-2">
+        <AngularIcon size="h-6 w-6" />
+        <TypeScriptIcon size="h-6 w-6" />
+        <TailwindIcon size="h-6 w-6" />
+      </div>
+      <p class="text-white grow">
+        Taking as a foundation the style and knowledge acquired from the Spotify
+        clone, a Lofi radio has been created. In this radio, YouTube videos are
+        used to play the music in real-time.
+      </p>
+    </SectionProject>
+
+    <SectionProject
+      title="Netflix Clone"
+      img="/public/projects/netflix.webp"
+      imgTitle="Netflix Clone App"
+      githubUrl=""
+      liveUrl=""
+    >
+      <div slot="techs" class="flex gap-2">
+        <AngularIcon size="h-6 w-6" />
+        <TypeScriptIcon size="h-6 w-6" />
+        <TailwindIcon size="h-6 w-6" />
+      </div>
+      <p class="text-white grow">
+        A Netflix clone has been developed, closely resembling the app's design,
+        video selection, and playback features.
+      </p>
+    </SectionProject>
+  </div>
+</section>

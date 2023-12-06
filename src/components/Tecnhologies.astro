@@ -1,0 +1,60 @@
+---
+import Card from "./Card.astro";
+import AngularIcon from "./icons/AngularIcon.astro";
+import FigmaIcon from "./icons/FigmaIcon.astro";
+import JavaScriptIcon from "./icons/JavaScriptIcon.astro";
+import MongodbIcon from "./icons/MongodbIcon.astro";
+import NodeJsIcon from "./icons/NodeJsIcon.astro";
+import TailwindIcon from "./icons/TailwindIcon.astro";
+import TypeScriptIcon from "./icons/TypeScriptIcon.astro";
+---
+
+<Card grid="row-span-2 col-span-2">
+  <div class="h-full flex flex-col gap-2">
+    <h2 class="grow text-2xl font-semibold text-white mt-4">Tecnhonologies</h2>
+    <div class="grow grid grid-cols-4 place-items-center gap-4">
+      <div
+        class="flex flex-col justify-center items-center text-white text-xs gap-2"
+      >
+        <AngularIcon size="h-10 w-10" />
+        <p>Angular</p>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center text-white text-xs gap-2"
+      >
+        <TypeScriptIcon size="h-10 w-10" />
+        <p>TypeScript</p>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center text-white text-xs gap-2"
+      >
+        <JavaScriptIcon size="h-10 w-10" />
+        <p>Javascript</p>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center text-white text-xs gap-2"
+      >
+        <TailwindIcon size="h-10 w-10" />
+        <p>Tailwind</p>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center text-white text-xs gap-2"
+      >
+        <FigmaIcon size="h-10 w-10" />
+        <p>Figma</p>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center text-white text-xs gap-2"
+      >
+        <NodeJsIcon size="h-10 w-10" />
+        <p>NodeJs</p>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center text-white text-xs gap-2"
+      >
+        <MongodbIcon size="h-10 w-10" />
+        <p>Mongodb</p>
+      </div>
+    </div>
+  </div>
+</Card>

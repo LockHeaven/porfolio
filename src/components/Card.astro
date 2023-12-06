@@ -1,0 +1,16 @@
+---
+interface Props {
+  grid?: string;
+}
+
+const { grid } = Astro.props;
+---
+
+<div
+  class=`
+    ${grid}
+    rounded-xl p-4 relative
+    bg-[#333F44] border-2 border-slate-800 hover:border-[#37AA9C]`
+>
+  <slot />
+</div>

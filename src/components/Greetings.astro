@@ -1,0 +1,17 @@
+---
+import Card from "./Card.astro";
+---
+
+<Card grid="row-span-3 sm:row-span-4 col-span-2 lg:row-span-2 lg:col-span-4">
+  <div class="flex w-full p-4">
+    <div class="flex flex-col h-full">
+      <p class="text-sm text-slate-500">Welcome</p>
+      <span class="text-2xl text-white"
+        >Hi, I'm <strong class="font-bold">Sebastian Contreras</strong>, a
+        software developer with strong focus on the user experience, animations
+        and micro interactions</span
+      >
+    </div>
+    <img class="h-60" src="/public/me.png" alt="Me with glasses" />
+  </div>
+</Card>
