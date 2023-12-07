@@ -3,6 +3,7 @@ import Card from "./Card.astro";
 import Country from "./Country.astro";
 import DayZone from "./DayZone.astro";
 import Greetings from "./Greetings.astro";
+import HomeGif from "./HomeGif.astro";
 import Skills from "./Skills.astro";
 import Tecnhologies from "./Tecnhologies.astro";
 import TimeZone from "./TimeZone.astro";
@@ -10,12 +11,10 @@ import GithubIcon from "./icons/GithubIcon.astro";
 import LinkedinIcon from "./icons/LinkedinIcon.astro";
 ---
 
-<section
-  class="auto-rows-[100px] grid grid-cols-2 sm:grid-cols-4 lg:auto-rows-[150px] lg:grid-cols-8 gap-5"
->
+<section class="auto-rows-[100px] grid grid-cols-2 sm:grid-cols-4 gap-5">
   <Greetings />
 
-  <Skills />
+  <HomeGif />
 
   <Country />
 
@@ -23,24 +22,17 @@ import LinkedinIcon from "./icons/LinkedinIcon.astro";
 
   <TimeZone />
 
-  <div
-    class="rounded-xl relative row-span-2 col-span-4
-        bg-[#333F44] border-2 border-slate-800 hover:border-[#37AA9C]"
-  >
-    <img class="h-full w-full rounded-xl" src="/public/sun.gif" alt="" />
-  </div>
-
   <DayZone />
 
   <Card grid="row-span-1 col-span-1">
     <div class="flex h-full w-full justify-center items-center">
-      <LinkedinIcon size="h-16 w-16" />
+      <LinkedinIcon size="h-14 w-14" />
     </div>
   </Card>
 
   <Card grid="row-span-1 col-span-1">
     <div class="flex h-full w-full justify-center items-center">
-      <GithubIcon size="h-16 w-16" />
+      <GithubIcon size="h-14 w-14" />
     </div>
   </Card>
 </section>

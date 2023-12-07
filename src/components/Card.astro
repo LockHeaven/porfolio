@@ -7,10 +7,21 @@ const { grid } = Astro.props;
 ---
 
 <div
-  class=`
+  class={`
     ${grid}
     rounded-xl p-4 relative
-    bg-[#333F44] border-2 border-slate-800 hover:border-[#37AA9C]`
+    border-slate-400/10
+    bg-[#2e3b168a] border-2 bg-radial-gradient-farthest hover:border-[#7ae627a1]`}
 >
   <slot />
 </div>
+
+<style>
+  .bg-radial-gradient-farthest {
+    background-image: radial-gradient(
+      circle farthest-side at 50% 110%,
+      #64ba22a1,
+      rgba(84, 61, 199, 0)
+    );
+  }
+</style>
