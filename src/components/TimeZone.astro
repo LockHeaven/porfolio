@@ -1,13 +1,46 @@
 ---
+import {
+  getCurrentTimeInColombia,
+  formatTimeForColombia,
+} from "../lib/helpers";
 import Card from "./Card.astro";
 ---
 
 <script>
-  const dateNow = new Date().getTime();
+  import { onCleanup, onMount, createRoot } from "solid-js";
+  import { formatTimeForColombia } from "../lib/helpers";
+
+  let interval: ReturnType<typeof setInterval>;
+
+  function updateClock() {
+    const timeDisplay = document.getElementById("timeDisplay");
+    const now = new Date();
+
+    if (timeDisplay) {
+      timeDisplay.textContent = formatTimeForColombia(now);
+      timeDisplay.setAttribute("datetime", now.toISOString());
+    }
+  }
+
+  createRoot(() => {
+    onMount(() => {
+      interval = setInterval(updateClock, 1000);
+    });
+
+    onCleanup(() => {
+      clearInterval(interval);
+    });
+  });
 </script>
 
 <Card grid="row-span-1 col-span-2">
   <div class="h-full w-full flex justify-center items-center">
-    <p class="text-white text-2xl font-semibold">11:07:13 PM</p>
+    <time
+      datetime=""
+      id="timeDisplay"
+      class="text-white text-2xl font-semibold"
+    >
+      {formatTimeForColombia(getCurrentTimeInColombia())}
+    </time>
   </div>
 </Card>

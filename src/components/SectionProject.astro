@@ -12,8 +12,8 @@ interface Props {
 const { title, img, imgTitle, githubUrl, liveUrl } = Astro.props;
 ---
 
-<section class="flex flex-col sm:flex-row gap-6 w-full h-full p-8">
-  <picture class="aspect-[9/16] sm:aspect-square min-w-fit h-56 object-cover">
+<section class="flex flex-col md:flex-row gap-6 w-full h-full p-3">
+  <picture class="aspect-[9/16] md:aspect-[16/9] min-w-fit h-56 object-cover">
     <img
       src={img}
       alt={imgTitle}
@@ -26,11 +26,11 @@ const { title, img, imgTitle, githubUrl, liveUrl } = Astro.props;
     <slot />
     <div class="flex gap-4 justify-end text-white">
       <a
-        class="cursor-pointer rounded-full hover:scale-125 hover:-translate-y-1 transition"
+        class="cursor-pointer hover:text-green-500 rounded-full hover:scale-125 hover:-translate-y-1 transition"
         ><LinkIcon size="h-8 w-8" /></a
       >
       <a
-        class="cursor-pointer rounded-full hover:scale-125 hover:-translate-y-1 transition"
+        class="cursor-pointer hover:text-green-500 rounded-full hover:scale-125 hover:-translate-y-1 transition"
         ><GithubIcon size="h-8 w-8" /></a
       >
     </div>

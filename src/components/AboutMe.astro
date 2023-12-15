@@ -4,6 +4,7 @@ import Country from "./Country.astro";
 import DayZone from "./DayZone.astro";
 import Greetings from "./Greetings.astro";
 import HomeGif from "./HomeGif.astro";
+import LinkCard from "./LinkCard.astro";
 import Skills from "./Skills.astro";
 import Tecnhologies from "./Tecnhologies.astro";
 import TimeZone from "./TimeZone.astro";
@@ -24,15 +25,17 @@ import LinkedinIcon from "./icons/LinkedinIcon.astro";
 
   <DayZone />
 
-  <Card grid="row-span-1 col-span-1">
-    <div class="flex h-full w-full justify-center items-center">
-      <LinkedinIcon size="h-14 w-14" />
-    </div>
-  </Card>
+  <LinkCard
+    grid="row-span-1 col-span-1"
+    linkUrl="https://www.linkedin.com/in/sebastian-contreras-ceballos/"
+  >
+    <LinkedinIcon size="h-14 w-14" />
+  </LinkCard>
 
-  <Card grid="row-span-1 col-span-1">
-    <div class="flex h-full w-full justify-center items-center">
-      <GithubIcon size="h-14 w-14" />
-    </div>
-  </Card>
+  <LinkCard
+    grid="row-span-1 col-span-1"
+    linkUrl="https://github.com/LockHeaven"
+  >
+    <GithubIcon size="h-14 w-14" />
+  </LinkCard>
 </section>

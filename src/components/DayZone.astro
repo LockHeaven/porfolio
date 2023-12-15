@@ -1,12 +1,19 @@
 ---
+import {
+  getCurrentTimeInColombia,
+  formatDate,
+  formatWeekDay,
+} from "../lib/helpers";
 import Card from "./Card.astro";
 ---
+
+<script></script>
 
 <Card grid="row-span-1 col-span-2">
   <div class="h-full flex items-center justify-center">
     <div class="text-white text-xl font-semibold flex flex-col items-start">
-      <p class="green-gradient">Sunday</p>
-      <p class="text-base">December 03, 2023</p>
+      <p class="green-gradient">{formatWeekDay(getCurrentTimeInColombia())}</p>
+      <p class="text-base">{formatDate(getCurrentTimeInColombia())}</p>
     </div>
   </div>
 </Card>

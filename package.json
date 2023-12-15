@@ -11,9 +11,13 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",
+    "@astrojs/solid-js": "^3.0.2",
     "@astrojs/tailwind": "^5.0.2",
+    "@astrojs/vue": "^4.0.3",
     "astro": "^3.6.4",
+    "solid-js": "^1.8.7",
     "tailwindcss": "^3.3.5",
-    "typescript": "^5.3.2"
+    "typescript": "^5.3.2",
+    "vue": "^3.3.11"
   }
 }
