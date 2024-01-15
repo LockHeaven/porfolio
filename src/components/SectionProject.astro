@@ -27,11 +27,13 @@ const { title, img, imgTitle, githubUrl, liveUrl } = Astro.props;
     <div class="flex gap-4 justify-end text-white">
       <a
         class="cursor-pointer hover:text-green-500 rounded-full hover:scale-125 hover:-translate-y-1 transition"
-        ><LinkIcon size="h-8 w-8" /></a
+        href={liveUrl}
+        target="_blank"><LinkIcon size="h-8 w-8" /></a
       >
       <a
         class="cursor-pointer hover:text-green-500 rounded-full hover:scale-125 hover:-translate-y-1 transition"
-        ><GithubIcon size="h-8 w-8" /></a
+        href={githubUrl}
+        target="_blank"><GithubIcon size="h-8 w-8" /></a
       >
     </div>
   </div>
